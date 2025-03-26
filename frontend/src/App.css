@@ -1,0 +1,11 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  background: rgb(53, 19, 75);
+  background: linear-gradient(
+    90deg,
+    rgba(53, 19, 75, 1) 0%,
+    rgba(50, 9, 45, 1) 49%,
+    rgba(47, 5, 24, 1) 100%
+  );
+}
