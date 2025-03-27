@@ -89,6 +89,30 @@
 	transform: translateY(1px);
 }
 
+.registration_link {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 0.9rem;
+}
+
+.registration_link span {
+	color: #fff;
+	opacity: 0.8;
+}
+
+.registration_link a {
+	color: #8860D0;
+	text-decoration: none;
+	font-weight: bold;
+	margin-left: 5px;
+	transition: color 0.3s;
+}
+
+.registration_link a:hover {
+	color: #a78dde;
+	text-decoration: underline;
+}
+
 
 @keyframes fadeIn {
 	from {

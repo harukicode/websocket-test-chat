@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./LoginScreen.module.css";
 
 export const LoginScreen = () => {
@@ -44,6 +44,12 @@ export const LoginScreen = () => {
           <button className={styles.login_form__button} type="submit">
             Login In
           </button>
+          
+          <div className={styles.registration_link}>
+            <span>You don't have an account?</span>
+            <Link to="/register">Registration</Link>
+          </div>
+          
         </form>
       </div>
     </div>
