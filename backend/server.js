@@ -19,13 +19,13 @@ app.use(express.json());
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
-    resalve: false,
+    resave: false,
     saveUninitialized: false,
     cookie: { secure: false, httpOnly: true, sameSite: "lax" },
   }),
 );
 
-app.get("/api", authRoutes);
+app.use("/api", authRoutes);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
