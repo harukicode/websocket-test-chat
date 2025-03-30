@@ -26,7 +26,7 @@ export const ChatScreen = () => {
   
   
   const [inputMessage, setInputMessage] = useState("");
-  const messagesEndRef = useRef(null);
+  const messagesContainerRef = useRef(null);
   
   const handleInputChange = (event) => {
     setInputMessage(event.target.value);
@@ -57,12 +57,19 @@ export const ChatScreen = () => {
   }
   
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    const container = messagesContainerRef.current;
+    if (container) {
+      container.scrollTop = container.scrollHeight;
+    }
   }
   
   useEffect(() => {
-    scrollToBottom()
+    scrollToBottom();
   }, [messages]);
+  
+  useEffect(() => {
+    scrollToBottom();
+  }, []);
   
   
   
@@ -70,7 +77,10 @@ export const ChatScreen = () => {
     <>
       <div className={styles.container}>
         <div className={styles.chat}>
-          <div className={styles.chat__content}>
+          <div
+            className={styles.chat__content}
+            ref={messagesContainerRef}
+          >
             {messages.map((message) => (
               <Message message={message} key={message.id} isCurrentUser={message.user === "User1"} />
             ))}
