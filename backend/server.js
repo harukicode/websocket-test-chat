@@ -4,8 +4,14 @@ require("dotenv").config();
 const app = express();
 const port = 3000;
 const cors = require("cors");
+const http = require("http");
+const {Server} = require("socket.io");
+
+
 
 const authRoutes = require("./routes/authRoutes.js");
+
+
 
 app.use(
   cors({
