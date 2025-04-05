@@ -3,8 +3,7 @@ const router = express.Router();
 const User = require("../models/User.js");
 
 //Registration
-router.post("/register"),
-  async (req, res) => {
+router.post("/register", async (req, res) => {
     try {
       const { username, password } = req.body;
 
@@ -26,7 +25,7 @@ router.post("/register"),
       console.log(error);
       res.status(500).json({ message: "Error user registration" });
     }
-  };
+  });
 
 //Login
 router.post("/login", async (req, res) => {

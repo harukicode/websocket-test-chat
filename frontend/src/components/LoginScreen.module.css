@@ -113,6 +113,13 @@
 	text-decoration: underline;
 }
 
+.error_message {
+	color: #f44336;
+	font-size: 0.75rem;
+	margin-top: 4px;
+	margin-bottom: 0;
+}
+
 
 @keyframes fadeIn {
 	from {

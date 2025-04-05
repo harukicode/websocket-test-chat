@@ -15,11 +15,17 @@
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   width: 30rem;
   height: 50rem;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .chat__content {
   flex-grow: 1;
   overflow-y: auto;
+  padding: 10px 0;
+  height: 70%;
+  scrollbar-width: none;
+  box-sizing: border-box;
 }
 
 .chat__input__container {
@@ -71,3 +77,5 @@
   transform: scale(0.95);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
+
+
