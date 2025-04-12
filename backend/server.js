@@ -66,7 +66,6 @@ io.on('connection', (socket) => {
     const { receiverId, content } = messageData;
     
     try {
-      // Используем ID пользователя из сокета вместо сессии
       if (!socket.userId) {
         socket.emit('error', { message: 'You must be logged in to send messages' });
         return;
@@ -110,7 +109,6 @@ io.on('connection', (socket) => {
     }
   });
   
-  // Пользователь отключился
   socket.on('disconnect', () => {
     console.log(`User disconnected: ${socket.id}`);
   });
